@@ -26,4 +26,7 @@ Thumbs.db
 *.gem
 
 # Logs
-*.log 
+*.log
+
+# Ignore docs README
+/docs/README.md  
