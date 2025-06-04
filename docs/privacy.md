@@ -2,6 +2,7 @@
 layout: default
 title: Privacy Policy
 description: Privacy Policy for X Feed Filter browser extension.
+permalink: /privacy.html
 ---
 
 <section class="max-w-2xl mx-auto my-12 glass-effect p-6 rounded-3xl shadow-2xl">
