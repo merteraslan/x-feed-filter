@@ -1,0 +1,29 @@
+# Jekyll build output
+/docs/_site/
+
+# Jekyll cache
+/docs/.jekyll-cache/
+
+# Sass cache (if used)
+/docs/.sass-cache/
+
+# Node modules (if used in the future)
+/docs/node_modules/
+
+# Vendor/bundle (if used in the future)
+/docs/vendor/
+
+# Local tool config
+.qodo/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Ruby specific
+*.gem
+
+# Logs
+*.log 

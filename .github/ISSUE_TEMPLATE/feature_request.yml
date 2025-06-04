@@ -1,0 +1,54 @@
+name: Feature Request / Enhancement
+description: Suggest a new feature or improvement for X Feed Filter
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve **X Feed Filter**!
+        Please use this form to suggest a new feature or an improvement to an existing one.
+
+  - type: textarea
+    attributes:
+      label: Problem or Need
+      description: |
+        What problem are you experiencing, or what benefit would this feature or improvement provide? 
+        (If possible, include example posts, screenshots, or steps to reproduce the need.)
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Proposed Solution
+      description: |
+        Describe the feature or improvement you'd like to see. 
+        Is it related to the browser popup, the Twitter/X context menu, or another part of the extension? 
+        If you've considered alternatives, please mention them.
+    validations:
+      required: true
+
+  - type: checkboxes
+    attributes:
+      label: Where would this feature apply?
+      options:
+        - label: Browser popup
+        - label: Twitter/X context menu (… button)
+        - label: Other (please specify in context)
+
+  - type: input
+    attributes:
+      label: Browser(s) affected
+      description: If this is browser-specific, please specify (e.g., Chrome, Edge, Brave). Otherwise, leave blank.
+
+  - type: textarea
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or mockups about the feature request here.
+
+  - type: checkboxes
+    attributes:
+      label: Privacy
+      description: Does this feature raise any privacy concerns?
+      options:
+        - label: No, this feature does not affect privacy.
+        - label: Yes, please explain in Additional Context.

@@ -1,0 +1,50 @@
+name: Bug Report
+description: File a bug report
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to fill out this bug report for the X Feed Filter browser extension
+  - type: input
+    attributes:
+      label: X Feed Filter version
+      description: What version of X Feed Filter are you running?
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Browser name and version
+      description: Which browser (e.g., Chrome, Edge, Brave) and version are you using?
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Other system input apps
+      description: Are you running any other apps that modify or suppress keyboard input?
+    validations:
+      required: false
+  - type: input
+    attributes:
+      label: OS version
+      description: What operating system and version are you running?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Describe the issue. What did you expect to happen, and what actually happened? If possible, include screenshots.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: Please provide step-by-step instructions to reproduce the issue on Twitter (x.com).
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here (e.g., links, error messages, console output).
+    validations:
+      required: false

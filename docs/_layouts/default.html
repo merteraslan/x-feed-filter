@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}" />
+  <link rel="icon" type="image/png" href="/assets/x-feed-filter.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'fade-in-up': 'fadeInUp 0.6s ease-out',
+            'fade-in-down': 'fadeInDown 0.6s ease-out',
+            'scale-in': 'scaleIn 0.5s ease-out',
+            'bounce-subtle': 'bounceSubtle 2s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            fadeInDown: {
+              '0%': { opacity: '0', transform: 'translateY(-30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            scaleIn: {
+              '0%': { opacity: '0', transform: 'scale(0.9)' },
+              '100%': { opacity: '1', transform: 'scale(1)' }
+            },
+            bounceSubtle: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-5px)' }
+            }
+          },
+          backgroundImage: {
+            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+          }
+        }
+      }
+    }
+  </script>
+  {% seo %}
+  <style>
+    .glass-effect {
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .feature-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px) scale(1.02);
+    }
+
+    .floating-animation {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .bg-mesh {
+      background-image:
+        radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+    }
+
+    .animation-delay-n3s {
+      animation-delay: -3s;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 bg-mesh text-gray-800 leading-relaxed min-h-screen flex flex-col">
+  <!-- Animated background elements -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl floating-animation"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl floating-animation animation-delay-n3s"></div>
+  </div>
+
+  <header class="glass-effect shadow-lg sticky top-0 z-50 animate-fade-in-down">
+    <div class="mx-auto flex max-w-6xl items-center justify-between p-3">
+      <div class="flex items-center space-x-2 group">
+        <div class="relative">
+          <img src="/assets/x-feed-filter.png" alt="X Feed Filter logo"
+            class="h-8 w-8 transition-transform group-hover:scale-110" />
+          <div
+            class="absolute inset-0 bg-blue-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity">
+          </div>
+        </div>
+        <h1 class="text-xl font-bold text-black">
+          <a href="/">Feed Filter</a>
+        </h1>
+      </div>
+      <a href="https://chrome.google.com/webstore/detail/xxxxxxxxxxxxxxxx" target="_blank" rel="noopener"
+        class="rounded-xl bg-blue-600 px-3 py-2 font-semibold text-white shadow-lg hover:bg-blue-700 transition-all duration-300">
+        <span>Install on Chrome</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl p-6 flex-grow w-full relative z-10">
+    {{ content }}
+  </main>
+
+  <footer class="glass-effect border-t border-white/20 mt-6 relative z-10">
+    <div class="mx-auto max-w-6xl p-3">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+        <div class="flex items-center space-x-2">
+          <img src="/assets/x-feed-filter.png" alt="X Feed Filter logo" class="h-6 w-6 opacity-70" />
+          <p class="text-xs text-gray-600">
+            &copy; <span id="year"></span> X Feed Filter. All rights reserved.
+          </p>
+        </div>
+        <div class="flex items-center space-x-3 text-xs">
+          <a href="https://github.com/merteraslan/x-feed-filter"
+            class="hover:text-blue-600 transition-colors flex items-center space-x-1">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://github.com/merteraslan/x-feed-filter/issues" class="hover:text-blue-600 transition-colors">Support</a>
+          <a href="/privacy.html" class="hover:text-blue-600 transition-colors">Privacy</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+
+</html>

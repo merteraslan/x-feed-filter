@@ -1,0 +1,17 @@
+title: X Feed Filter
+email: your-email@example.com
+description: >-
+  Browser extension for Twitter/X — blocks or hides posts from specific Communities to keep your timeline clutter‑free.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://your-username.github.io/x-feed-filter" # the base hostname & protocol for your site
+theme: null
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude these files/folders from the generated site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor 
