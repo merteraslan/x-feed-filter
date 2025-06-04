@@ -73,18 +73,11 @@
 - No tracking, no external requests
 - Block-list saved only in your browser
 
----
-
-## Contributing
-
-> **Note:** The extension's source code is private. This repository is for bug reports, feature requests, and discussion only.
-
----
-
 ## License
 
 All rights reserved.
 
 ---
 
-Thanks for helping make timelines healthier! If the extension saves you scrolling fatigue, consider buying me a coffee ☕ – link in the extension popup.
+Thanks for helping make timelines healthier! If the extension saves you scrolling fatigue, consider buying me a coffee ☕.
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/merteraslan)
