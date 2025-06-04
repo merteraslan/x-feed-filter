@@ -100,13 +100,13 @@ description: Browser extension for Twitter/X — blocks or hides posts from spec
       <a href="https://chrome.google.com/webstore/detail/xxxxxxxxxxxxxxxx" target="_blank" rel="noopener" 
          class="group transform hover:scale-105 transition-all duration-300 hover:drop-shadow-2xl">
         <div class="relative">
-          <img src="/assets/chrome-web-store.png" alt="Available in the Chrome Web Store" class="h-12 rounded-xl shadow-lg bg-white border border-gray-200" />
+          <img src="{{ site.baseurl }}/assets/chrome-web-store.png" alt="Available in the Chrome Web Store" class="h-12 rounded-xl shadow-lg bg-white border border-gray-200" />
         </div>
       </a>
       <a href="https://microsoftedge.microsoft.com/addons/detail/xxxxxxxxxxxxxxxx" target="_blank" rel="noopener" 
          class="group transform hover:scale-105 transition-all duration-300 hover:drop-shadow-2xl">
         <div class="relative">
-          <img src="/assets/edge-web-store.png" alt="Get it for Microsoft Edge" class="h-12 rounded-xl shadow-lg bg-white border border-gray-200" />
+          <img src="{{ site.baseurl }}/assets/edge-web-store.png" alt="Get it for Microsoft Edge" class="h-12 rounded-xl shadow-lg bg-white border border-gray-200" />
         </div>
       </a>
     </div>
@@ -225,7 +225,7 @@ description: Browser extension for Twitter/X — blocks or hides posts from spec
       </p>
       <a href="https://buymeacoffee.com/merteraslan" target="_blank" rel="noopener" 
          class="group inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 px-6 py-2 text-base font-bold text-gray-900 hover:from-amber-500 hover:to-orange-600 transition-all duration-300 shadow-2xl hover:shadow-amber-500/25 hover:scale-105 transform">
-        <img src="/assets/bmc-full-logo.svg" alt="Buy Me a Coffee" class="h-6 mr-2 group-hover:scale-110 transition-transform" />
+        <img src="{{ site.baseurl }}/assets/bmc-full-logo.svg" alt="Buy Me a Coffee" class="h-6 mr-2 group-hover:scale-110 transition-transform" />
       </a>
     </div>
   </div>
