@@ -8,6 +8,7 @@ theme: null
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Exclude these files/folders from the generated site
 exclude:
